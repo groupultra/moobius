@@ -18,7 +18,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -27,4 +27,23 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.book-demo-button {
+  background-color: #2e2e2e;
+  color: #fff;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.get-started-button {
+  background: linear-gradient(90deg, #805df3 16.97%, #309aed 100%);
+  box-shadow: 0px 0px 0px 4px rgba(186, 166, 251, 0.15),
+    0px -12px 24px 3px rgba(255, 255, 255, 0.64);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.navbar__inner .DocSearch {
+  display: none;
 }

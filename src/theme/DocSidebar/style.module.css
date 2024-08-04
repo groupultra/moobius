@@ -1,0 +1,10 @@
+.slideWapper > div > a {
+  display: none !important;
+}
+.searchWrapper {
+  padding: 0px 10px;
+}
+.searchWrapper :global(.DocSearch-Button) {
+  border-radius: 10px;
+  width: 100%;
+}

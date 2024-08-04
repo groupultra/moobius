@@ -1,12 +1,34 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import { themes as prismThemes } from "prism-react-renderer";
-const VERSIONS_JSON = require("./versions.json");
-/** @type {import('@docusaurus/types').Config} */
+import versions from "./versions.json";
+
+function isPrerelease(version) {
+  return (
+    version.includes("-") ||
+    version.includes("alpha") ||
+    version.includes("beta") ||
+    version.includes("rc")
+  );
+}
+function getLastStableVersion() {
+  const lastStableVersion = versions.find((version) => !isPrerelease(version));
+  if (!lastStableVersion) {
+    throw new Error("unexpected, no stable Docusaurus version?");
+  }
+  return lastStableVersion;
+}
+function getLastStableVersionTuple() {
+  const lastStableVersion = getLastStableVersion();
+  const parts = lastStableVersion.split(".");
+  if (parts.length !== 3) {
+    throw new Error(`Unexpected stable version name: ${lastStableVersion}`);
+  }
+  return [parts[0], parts[1], parts[2]];
+}
+function getAnnouncedVersion() {
+  const [major, minor] = getLastStableVersionTuple();
+  return `${major}.${minor}`;
+}
+const announcedVersion = getAnnouncedVersion();
 const config = {
   title: "Moobius Documentation",
   tagline:
@@ -21,10 +43,10 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "groupultra", // Usually your GitHub org/user name.
+  projectName: "moobius", // Usually your repo name.
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
@@ -42,17 +64,18 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
+          routeBasePath: "/",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -60,83 +83,106 @@ const config = {
       }),
     ],
   ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
-      navbar: {
-        title: "My Site",
-        logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
+  customFields: {
+    announcedVersion,
+  },
+  themeConfig: {
+    colorMode: {
+      defaultMode: "light",
+    },
+    navbar: {
+      hideOnScroll: true,
+      title: "",
+      logo: {
+        alt: "Moobius Logo",
+        src: "img/logo-light.png",
+        srcDark: `/img/logo-dark.png`,
+        width: 164,
+      },
+      items: [
+        {
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "Tutorial",
         },
-        items: [
-          {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
-            position: "left",
-            label: "Tutorial",
-          },
-          { to: "/blog", label: "Blog", position: "left" },
-          {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
-      },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+        { to: "/blog", label: "Blog", position: "left" },
+
+        {
+          to: "https://moobius.net/login",
+          label: "Sign In",
+          position: "right",
+        },
+        {
+          to: "https://moobius.net/login",
+          label: "Book Demo",
+          position: "right",
+          className: "book-demo-button",
+        },
+        {
+          to: "https://moobius.net/login",
+          label: "Get Started",
+          position: "right",
+          className: "get-started-button",
+        },
+      ],
+    },
+    algolia: {
+      appId: "AK0W51D1JL",
+      apiKey: "3bd244330b2f59094cf45022494cb5fb",
+      indexName: "moobius",
+      contextualSearch: true,
+    },
+    footer: {
+      style: "dark",
+      links: [
+        {
+          title: "Docs",
+          items: [
+            {
+              label: "Tutorial",
+              to: "/docs/intro",
+            },
+          ],
+        },
+        {
+          title: "Community",
+          items: [
+            {
+              label: "Stack Overflow",
+              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+            },
+            {
+              label: "Discord",
+              href: "https://discordapp.com/invite/docusaurus",
+            },
+            {
+              label: "Twitter",
+              href: "https://twitter.com/docusaurus",
+            },
+          ],
+        },
+        {
+          title: "More",
+          items: [
+            {
+              label: "Blog",
+              to: "/blog",
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/facebook/docusaurus",
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  },
 };
 
 export default config;
