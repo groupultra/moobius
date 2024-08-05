@@ -115,8 +115,9 @@ const config = {
 
         {
           to: "https://moobius.net/login",
-          label: "Sign In",
+          label: "Get Started",
           position: "right",
+          className: "get-started-button",
         },
         {
           to: "https://moobius.net/login",
@@ -126,9 +127,9 @@ const config = {
         },
         {
           to: "https://moobius.net/login",
-          label: "Get Started",
+          label: "Sign In",
           position: "right",
-          className: "get-started-button",
+          className: "sing-in-button",
         },
       ],
     },

@@ -3,17 +3,20 @@
 }
 .mysidebaricon {
   position: absolute;
-  top: 5px;
+  top: 7px;
   left: 8px;
 }
-
+.mysidebaritem li {
+  margin-top: 0.5rem;
+}
 .mysidebaritem li,
 .mysidebaritem li :hover {
   background: none;
 }
 .mysidebaritem li a {
-  padding-left: 30px;
+  padding-left: 32px;
   color: var(--ifm-navbar-link-color);
+  border-radius: 0.5rem;
 }
 .mysidebaritem li a,
 .mysidebaritem li a :hover {
@@ -24,4 +27,5 @@
 }
 .mysidebaritem li a:global(.menu__link--active) {
   background-color: var(--menu-color-bg-active);
+  color: var(--menu-color-active);
 }

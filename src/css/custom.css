@@ -7,9 +7,10 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-navbar-background-color: #f3f2ee;
+  --ifm-background-color: #f3f2ee;
   --ifm-footer-background-color: #f3f2ee;
   --ifm-toc-border-color: #dedede;
-  --ifm-navbar-link-color: #2e2e2e;
+  --ifm-navbar-link-color: rgb(46, 46, 46);
   --ifm-menu-color-active: #2e2e2e;
   --ifm-navbar-link-hover-color: #805df3;
   --ifm-color-primary: #805df3;
@@ -22,13 +23,18 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical));
-
+  --ifm-menu-link-padding-vertical: 0.5rem;
+  --docsearch-searchbox-background: #e5e6e1 !important;
+  --docsearch-searchbox-focus-background: #e5e6e1 !important;
+  --docsearch-searchbox-shadow: inset 0 0 0 1px #c9cac4 !important;
   --menu-color-bg-active: rgba(229, 230, 225, 0.5);
+  --menu-color-active: rgb(16, 16, 16);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
   --ifm-navbar-background-color: #242526;
+  --ifm-background-color: #1b1b1d;
   --ifm-footer-background-color: #1b1b1b;
   --ifm-toc-border-color: #343639;
   --ifm-navbar-link-color: #f5f5f5;
@@ -43,8 +49,12 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical));
-
+  --ifm-menu-link-padding-vertical: 0.5rem;
+  --docsearch-searchbox-background: #242526 !important;
+  --docsearch-searchbox-focus-background: #242526 !important;
+  --docsearch-searchbox-shadow: inset 0 0 0 1px #3c3d3e !important;
   --menu-color-bg-active: rgba(255, 255, 255, 0.15);
+  --menu-color-active: #ffffff;
 }
 .book-demo-button,
 .get-started-button {
@@ -53,7 +63,6 @@
 }
 .book-demo-button {
   background-color: #2e2e2e;
-  margin-right: 10px;
 }
 
 .get-started-button {
@@ -64,16 +73,24 @@
 .get-started-button:hover {
   color: #fff;
 }
-
+.sing-in-button {
+  padding-left: 0;
+}
 .navbar__inner .DocSearch {
   display: none;
 }
 
 body {
-  background-color: var(--ifm-navbar-background-color);
+  background-color: var(--ifm-background-color);
 }
 
 .my-footer {
   border-top: 1px solid var(--ifm-toc-border-color);
   width: 100%;
+}
+
+.navbar__items--right {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  gap: 0.8rem;
 }
