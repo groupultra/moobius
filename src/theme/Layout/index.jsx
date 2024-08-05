@@ -6,7 +6,7 @@ import {
   ThemeClassNames,
 } from "@docusaurus/theme-common";
 import { useKeyboardNavigation } from "@docusaurus/theme-common/internal";
-import Footer from "@theme/Footer";
+
 import Navbar from "@theme/Navbar";
 import clsx from "clsx";
 
@@ -19,7 +19,6 @@ import React from "react";
 export default function Layout(props) {
   const {
     children,
-    noFooter,
     wrapperClassName,
     // Not really layout-related, but kept for convenience/retro-compatibility
     title,
@@ -46,7 +45,6 @@ export default function Layout(props) {
           {children}
         </ErrorBoundary>
       </div>
-      {!noFooter && <Footer />}
     </LayoutProvider>
   );
 }

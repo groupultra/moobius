@@ -8,3 +8,12 @@
   border-radius: 10px;
   width: 100%;
 }
+
+.slidebarContainer > div {
+  padding-top: 0;
+  width: 100%;
+}
+
+.slidebarContainer {
+  padding-right: 8px;
+}

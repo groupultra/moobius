@@ -6,8 +6,14 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
+  --ifm-navbar-background-color: #f3f2ee;
+  --ifm-footer-background-color: #f3f2ee;
+  --ifm-toc-border-color: #dedede;
+  --ifm-navbar-link-color: #2e2e2e;
+  --ifm-menu-color-active: #2e2e2e;
+  --ifm-navbar-link-hover-color: #805df3;
+  --ifm-color-primary: #805df3;
+  --ifm-color-primary-dark: #a184ff;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
   --ifm-color-primary-light: #33925d;
@@ -15,35 +21,59 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical));
+
+  --menu-color-bg-active: rgba(229, 230, 225, 0.5);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
+  --ifm-navbar-background-color: #242526;
+  --ifm-footer-background-color: #1b1b1b;
+  --ifm-toc-border-color: #343639;
+  --ifm-navbar-link-color: #f5f5f5;
+  --ifm-menu-color-active: #f5f5f5;
+  --ifm-navbar-link-hover-color: #a184ff;
+  --ifm-color-primary: #805df3;
+  --ifm-color-primary-dark: #a184ff;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
+  --ifm-footer-padding-vertical: calc(var(--ifm-spacing-vertical));
 
-.book-demo-button {
-  background-color: #2e2e2e;
+  --menu-color-bg-active: rgba(255, 255, 255, 0.15);
+}
+.book-demo-button,
+.get-started-button {
   color: #fff;
   border-radius: 10px;
+}
+.book-demo-button {
+  background-color: #2e2e2e;
   margin-right: 10px;
 }
 
 .get-started-button {
   background: linear-gradient(90deg, #805df3 16.97%, #309aed 100%);
-  box-shadow: 0px 0px 0px 4px rgba(186, 166, 251, 0.15),
-    0px -12px 24px 3px rgba(255, 255, 255, 0.64);
+  box-shadow: 0px 0px 0px 4px rgba(186, 166, 251, 0.15);
+}
+.book-demo-button:hover,
+.get-started-button:hover {
   color: #fff;
-  border-radius: 10px;
 }
 
 .navbar__inner .DocSearch {
   display: none;
+}
+
+body {
+  background-color: var(--ifm-navbar-background-color);
+}
+
+.my-footer {
+  border-top: 1px solid var(--ifm-toc-border-color);
+  width: 100%;
 }

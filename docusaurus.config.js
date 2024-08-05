@@ -29,6 +29,10 @@ function getAnnouncedVersion() {
   return `${major}.${minor}`;
 }
 const announcedVersion = getAnnouncedVersion();
+const isDev = process.env.NODE_ENV === "development";
+
+const isDeployPreview =
+  !!process.env.NETLIFY && process.env.CONTEXT === "deploy-preview";
 const config = {
   title: "Moobius Documentation",
   tagline:
@@ -91,21 +95,22 @@ const config = {
       defaultMode: "light",
     },
     navbar: {
-      hideOnScroll: true,
+      hideOnScroll: false,
       title: "",
       logo: {
         alt: "Moobius Logo",
         src: "img/logo-light.png",
         srcDark: `/img/logo-dark.png`,
         width: 164,
+        href: "/",
       },
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Tutorial",
-        },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "tutorialSidebar",
+        //   position: "left",
+        //   label: "Tutorial",
+        // },
         { to: "/blog", label: "Blog", position: "left" },
 
         {
@@ -129,54 +134,19 @@ const config = {
     },
     algolia: {
       appId: "AK0W51D1JL",
-      apiKey: "3bd244330b2f59094cf45022494cb5fb",
+      apiKey: "d8da3b4ceb3bba991b1ba7162b337f0b",
       indexName: "moobius",
       contextualSearch: true,
+      replaceSearchResultPathname:
+        isDev || isDeployPreview
+          ? {
+              from: /^\/docs\/next/g.source,
+              to: "/docs",
+            }
+          : undefined,
     },
     footer: {
-      style: "dark",
-      links: [
-        {
-          title: "Docs",
-          items: [
-            {
-              label: "Tutorial",
-              to: "/docs/intro",
-            },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Moobius, Inc.`,
     },
     prism: {
       theme: prismThemes.github,
