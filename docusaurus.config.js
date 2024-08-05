@@ -38,7 +38,7 @@ const config = {
   tagline:
     "Moobius is a group-driven social interaction platform which resembles Discord but has more features and flexibility.",
   favicon: "img/favicon.ico",
-  githubHost: "@github.com-yhcss2:groupultra/moobius.git",
+  githubHost: "github.com-yhcss2:groupultra/moobius.git",
   // Set the production url of your site here
   url: "https://groupultra.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
