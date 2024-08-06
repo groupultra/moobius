@@ -1,5 +1,7 @@
 ---
-id: Canvas, Button and Context Menu
+id: CanvasButton
+label: Canvas Button
+title: Canvas, Button and Context Menu
 ---
 
 ## Canvas

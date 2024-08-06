@@ -38,7 +38,11 @@
         "tutorial-basics/Run Demo",
         "tutorial-basics/Characters",
         "tutorial-basics/Messages",
-        "tutorial-basics/Canvas, Button and Context Menu",
+        {
+          "type": "doc",
+          "id": "tutorial-basics/CanvasButton",
+          "label": "Canvas & Button & Context Menu"
+        },
         "tutorial-basics/Miscellaneous Actions",
         "tutorial-basics/Life Cycle"
       ]
