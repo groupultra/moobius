@@ -120,7 +120,7 @@ const config = {
           className: "get-started-button",
         },
         {
-          to: "https://moobius.net/login",
+          to: "https://moobius.readthedocs.io/en/latest/index.html",
           label: "Book Demo",
           position: "right",
           className: "book-demo-button",
