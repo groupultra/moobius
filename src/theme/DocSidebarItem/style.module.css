@@ -37,3 +37,9 @@
   overflow: hidden;
   display: block;
 }
+
+:global(.menu__caret:before) {
+  width: 0.8rem;
+  height: 0.8rem;
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.2rem 1.2rem;
+}
