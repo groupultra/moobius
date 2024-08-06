@@ -1,8 +1,8 @@
 ---
 id: Home
+classname: home
 ---
 
-<!-- import DocsCard from '../../src/components/global/DocsCard';
-import DocsCards from '../../src/components/global/DocsCards';
+import DocsBanner from '../../src/components/global/DocsBanner';
 
-<DocsCard header="UI Components" href="/components" icon="/icons/guide-components-icon.svg" hoverIcon="/icons/guide-components-icon-hover.svg" /> -->
+<DocsBanner title="Welcome to Moobius Docs" desc="Moobius is a group-driven social interaction platform which resembles Discord but has more features and flexibility." />

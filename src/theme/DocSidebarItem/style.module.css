@@ -28,4 +28,7 @@
 .mysidebaritem li a:global(.menu__link--active) {
   background-color: var(--menu-color-bg-active);
   color: var(--menu-color-active);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
