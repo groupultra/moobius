@@ -4,6 +4,8 @@
 .slideWapper {
   width: 280px;
   overflow-x: hidden;
+  height: 100%;
+  overflow-y: auto;
 }
 .searchWrapper {
   padding: 0px 10px;

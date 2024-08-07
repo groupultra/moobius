@@ -147,7 +147,7 @@ const config = {
           : undefined,
     },
     footer: {
-      copyright: `Copyright © ${new Date().getFullYear()} Moobius, Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} GroupUltra Ltd.`,
     },
     prism: {
       theme: prismThemes.github,
