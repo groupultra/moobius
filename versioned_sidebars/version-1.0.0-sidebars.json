@@ -52,5 +52,12 @@
       "id": "tutorial-basics/AdvancedReference",
       "label": "Advanced Reference"
     }
+  ],
+  "Advanced": [
+    {
+      "type": "doc",
+      "id": "Advanced",
+      "label": "Advanced"
+    }
   ]
 }

@@ -9,6 +9,13 @@ const sidebars = {
       },
     },
   ],
+  Advanced: [
+    {
+      type: "doc",
+      id: "Advanced",
+      label: "Advanced",
+    },
+  ],
 };
 
 export default sidebars;

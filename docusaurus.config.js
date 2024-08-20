@@ -105,13 +105,18 @@ const config = {
         href: "/",
       },
       items: [
-        // {
-        //   type: "docSidebar",
-        //   sidebarId: "tutorialSidebar",
-        //   position: "left",
-        //   label: "Tutorial",
-        // },
-        // { to: "/blog", label: "Blog", position: "left" },
+        {
+          type: "docSidebar",
+          sidebarId: "docs",
+          position: "left",
+          label: "Basic",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "Advanced",
+          position: "left",
+          label: "Advanced",
+        },
 
         {
           to: "https://moobius.net/login",
