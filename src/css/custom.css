@@ -178,3 +178,6 @@ docs-cards.max-measure > docs-card {
 .my-home .theme-doc-markdown > header {
   display: none;
 }
+.my-home > main > .container > .row > .col > div > article > footer {
+  display: none !important;
+}
