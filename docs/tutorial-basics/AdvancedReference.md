@@ -1,0 +1,7 @@
+- Details to care about (initialization, refresh, consistency)
+- Database and MoobiusStorage (dict caveat)
+- Wand (multiple Channel control/external spell control)
+- Agent SDK (for Cyborg, plugins and new Product)
+- Commentary: Philosophy -- from group chat to group based application
+- Commentary: How Moobius works with AI
+- Kevin's material
