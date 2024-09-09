@@ -43,9 +43,12 @@ const sidebars = {
           id: "tutorial-basics/CanvasButton",
           label: "Canvas & Button & Context Menu",
         },
-        "tutorial-basics/Miscellaneous Actions",
-        "tutorial-basics/Life Cycle",
       ],
+    },
+    {
+      type: "doc",
+      id: "tutorial-basics/Quick_Reference",
+      label: "Quick Reference",
     },
     {
       type: "doc",

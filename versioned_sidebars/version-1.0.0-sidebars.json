@@ -36,16 +36,19 @@
       },
       "items": [
         "tutorial-basics/Run Demo",
-        "tutorial-basics/Characters",
+        "tutorial-basics/Members_Characters",
         "tutorial-basics/Messages",
         {
           "type": "doc",
           "id": "tutorial-basics/CanvasButton",
           "label": "Canvas & Button & Context Menu"
-        },
-        "tutorial-basics/Miscellaneous Actions",
-        "tutorial-basics/Life Cycle"
+        }
       ]
+    },
+    {
+      "type": "doc",
+      "id": "tutorial-basics/Quick_Reference",
+      "label": "Quick Reference"
     },
     {
       "type": "doc",

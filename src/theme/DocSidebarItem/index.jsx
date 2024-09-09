@@ -7,6 +7,7 @@ import {
   Target,
   TvMinimal,
   Wrench,
+  Zap,
 } from "lucide-react";
 import style from "./style.module.css";
 const iconMapping = {
@@ -15,6 +16,7 @@ const iconMapping = {
   "getting started": <Target size={16} />,
   "custom channel service": <TvMinimal size={16} />,
   "build your first gba": <Wrench size={16} />,
+  "quick reference": <Zap size={16} />,
   "advanced reference": <BookMarked size={16} />,
   default: null,
 };
