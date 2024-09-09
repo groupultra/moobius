@@ -36,7 +36,7 @@ const sidebars = {
       },
       items: [
         "tutorial-basics/Run Demo",
-        "tutorial-basics/Characters",
+        "tutorial-basics/Members_Characters",
         "tutorial-basics/Messages",
         {
           type: "doc",

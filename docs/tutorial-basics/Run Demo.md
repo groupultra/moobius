@@ -120,4 +120,6 @@ The SDK uses `loguru` for logging. Logs are not only printed to console, but sav
 
 Congratulations! You are officially a Moobius Developer now, and let's explore the wonderful world of GBA!
 
-Tip: Our tutorial assumes you have basic knowledge and experience of the Python programming language, including asynchronous programming https://docs.python.org/3/library/asyncio-task.html (`async`/`await`). Don't worry if you are not familiar with the entire field of event loops, coroutines, tasks and futures, since this Basic Tutorial requires almost nothing more than of the basic usage of `async` and `await` keywords. In a word, if a function is defined as asynchronous (using `async def` instead of `def`), you should call it only inside another `async` function, and use `await` before your call statement (this principle is not strictly true but enough for this tutorial).
+:::tip
+Our tutorial assumes you have basic knowledge and experience of the Python programming language, including asynchronous programming https://docs.python.org/3/library/asyncio-task.html (`async`/`await`). Don't worry if you are not familiar with the entire field of event loops, coroutines, tasks and futures, since this Basic Tutorial requires almost nothing more than of the basic usage of `async` and `await` keywords. In a word, if a function is defined as asynchronous (using `async def` instead of `def`), you should call it only inside another `async` function, and use `await` before your call statement (this principle is not strictly true but enough for this tutorial).
+:::

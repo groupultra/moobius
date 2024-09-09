@@ -10,25 +10,25 @@ A CCS is a computer program that establishes network connections to the Moobius 
 
 ![moobius](/img/1-2.gif)
 
-The Event sent from a User's client to the Moobius Platform and forwarded to a CCS is called an Upward Event. An Upward Event represents "what a User does" in a Channel, including:
+The Event sent from a User's client to the Moobius Platform and forwarded to a CCS is called an **Upward Event**. An Upward Event represents "what a User does" in a Channel, including:
 
-- Upward Message: A User sends a Message（message_up）
+- Upward Message: A User sends a Message（`message_up`）
 - Action: Other forms of a User's active behavior except sending Messages
-  - A User clicks a Button (button_click)
-  - A User right-clicks a Message, and clicks a Context Menu Item (menu_item_click)
-  - A User joins the Channel (join)
-  - A User leaves a Channel (leave)
-- Refresh: The client automatically requests for view updates when a Channel comes into focus (refresh)
+  - A User clicks a Button (`button_click`)
+  - A User right-clicks a Message, and clicks a Context Menu Item (`menu_item_click`)
+  - A User joins the Channel (`join`)
+  - A User leaves a Channel (`leave`)
+- Refresh: The client automatically requests for view updates when a Channel comes into focus (`refresh`)
 
-The Event sent from a CCS as an instruction to the Moobius Platform and forwarded to a User's Client is called a Downward Event. A Downward Event represents "what a User sees" in a Channel (managed by CCS), including:
+The Event sent from a CCS as an instruction to the Moobius Platform and forwarded to a User's Client is called a **Downward Event**. A Downward Event represents "what a User sees" in a Channel (managed by CCS), including:
 
-- Downward Message: CCS Displays a Message for certain User(s) (message_down)
+- Downward Message: CCS Displays a Message for certain User(s) (`message_down`)
 - Update: CCS updates the configuration or the view of customizable component(s) for certain User(s)
-  - Update text and/or image on Canvas (update_canvas)
-  - Update the Button list (update_buttons)
-  - Update the Context Menu (update_menu)
-  - Update the Character list (update_characters)
-  - Update the display style of customizable components (update_style)
+  - Update text and/or image on Canvas (`update_canvas`)
+  - Update the Button list (`update_buttons`)
+  - Update the Context Menu (`update_menu`)
+  - Update the Character list (`update_characters`)
+  - Update the display style of customizable components (`update_style`)
 
 ![moobius](/img/i-3.jpeg)
 
