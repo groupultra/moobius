@@ -116,20 +116,20 @@ const config = {
           label: "Advanced",
         },
 
+        // {
+        //   to: "https://moobius.ai/login",
+        //   label: "Get Started",
+        //   position: "right",
+        //   className: "get-started-button",
+        // },
+        // {
+        //   to: "https://moobius.readthedocs.io/en/latest/index.html",
+        //   label: "Book Demo",
+        //   position: "right",
+        //   className: "book-demo-button",
+        // },
         {
-          to: "https://moobius.net/login",
-          label: "Get Started",
-          position: "right",
-          className: "get-started-button",
-        },
-        {
-          to: "https://moobius.readthedocs.io/en/latest/index.html",
-          label: "Book Demo",
-          position: "right",
-          className: "book-demo-button",
-        },
-        {
-          to: "https://moobius.net/login",
+          to: "https://moobius.ai/login",
           label: "Sign In",
           position: "right",
           className: "sing-in-button",

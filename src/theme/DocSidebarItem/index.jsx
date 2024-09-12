@@ -1,9 +1,9 @@
 import DocSidebarItem from "@theme-original/DocSidebarItem";
 import clsx from "clsx";
 import {
-  BookMarked,
   BookOpenText,
   House,
+  Pickaxe,
   Target,
   TvMinimal,
   Wrench,
@@ -17,7 +17,7 @@ const iconMapping = {
   "custom channel service": <TvMinimal size={16} />,
   "build your first gba": <Wrench size={16} />,
   "quick reference": <Zap size={16} />,
-  "advanced reference": <BookMarked size={16} />,
+  advanced: <Pickaxe size={16} />,
   default: null,
 };
 function CustomDocSidebarItem(props) {

@@ -50,11 +50,6 @@ const sidebars = {
       id: "tutorial-basics/Quick_Reference",
       label: "Quick Reference",
     },
-    {
-      type: "doc",
-      id: "tutorial-basics/AdvancedReference",
-      label: "Advanced Reference",
-    },
   ],
   Advanced: [
     {
